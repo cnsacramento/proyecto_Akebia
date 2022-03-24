@@ -1,5 +1,9 @@
 package ies.puerto.akebia;
 
+/**
+ * @author Alberto Hernandez Medina y Christian Novo Sacramento
+ * Clase que contiene todos lo metodo y datos del usuario
+ */
 public class Usuario {
 
     private int id;
