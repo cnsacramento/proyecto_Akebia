@@ -1,5 +1,9 @@
 package ies.puerto.akebia;
 
+/**
+ * @author Alberto Hernandez Medina y Christian Novo Sacramento
+ * Clase que contiene todos lo metodo y datos del alimento
+ */
 public class Alimento {
 
     private int id;

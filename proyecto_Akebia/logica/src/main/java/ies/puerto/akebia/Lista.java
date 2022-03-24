@@ -1,7 +1,12 @@
 package ies.puerto.akebia;
 
 import java.util.Date;
+import java.util.HashMap;
 
+/**
+ * @author Alberto Hernandez Medina y Christian Novo Sacramento
+ * Clase que contiene todos lo metodo y datos de la lista
+ */
 public class Lista {
 
     private int id;

@@ -1,8 +1,10 @@
 package ies.puerto.akebia;
 
+import java.util.ArrayList;
+
 /**
  * @author Alberto Hernandez Medina y Christian Novo Sacramento
- * Clase que contiene todos lo metodo y datos del usuario
+ * Clase que contiene todos lo metodo y datos del Mural
  */
 public class Mural {
 
