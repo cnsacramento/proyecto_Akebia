@@ -48,6 +48,11 @@ public class Mural {
      */
     public void verSupermercados(){}
 
+    /**
+     * Metodo que permite compartir una lista o varias listas
+     */
+    public void compartirLista(){}
+
     //Getters y setters
 
     public ArrayList<Lista> getListas() {

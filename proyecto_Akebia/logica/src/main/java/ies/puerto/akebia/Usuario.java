@@ -55,6 +55,12 @@ public class Usuario {
      */
     public void cambiarContrasenia(){}
 
+    /**
+     * Metodo que permite cambiar la foto
+     */
+    public void cambiarFoto(){}
+
+
     // Getters y setters
 
     public int getId() {
