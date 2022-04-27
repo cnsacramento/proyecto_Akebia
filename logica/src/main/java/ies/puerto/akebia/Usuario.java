@@ -41,6 +41,16 @@ public class Usuario {
     public void verPerfil(){}
 
     /**
+     * Metodo que permite cambiar la configuracion
+     */
+    public void cambiarConfiguracion() {
+        cambiarAlias();
+        cambiarEmail();
+        cambiarContrasenia();
+        cambiarFoto();
+    }
+
+    /**
      * Metodo que permite cambiar el alias
      */
     public void cambiarAlias(){}
