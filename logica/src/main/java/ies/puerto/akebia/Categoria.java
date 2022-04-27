@@ -1,6 +1,16 @@
 package ies.puerto.akebia;
 
-public class Categoria {
 
-    private enum Categoria{};
+/**
+ * Enum que contiene las distintas categorias de los alimentos
+ */
+public enum Categoria {
+    LACTEOS,
+    PESCADOS,
+    CARNES,
+    FRUTAS,
+    VERDURAS,
+    CEREALES,
+    GRASAS,
+
 }
