@@ -1,13 +1,11 @@
 import ies.puerto.akebia.Lista;
-import org.junit.Assert;
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.jupiter.api.*;
 
 public class ListaTest {
 
     Lista lista;
 
-    @Before
+    @BeforeEach
     public void before() {
 
         if(lista == null) lista = new Lista();
@@ -16,6 +14,6 @@ public class ListaTest {
     @Test
     public void constructorVacioTest() {
 
-        Assert.assertNotNull("La lista es nula",lista);
+        Assertions.assertNotNull(lista, "La lista es nula");
     }
 }

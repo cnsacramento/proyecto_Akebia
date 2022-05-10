@@ -54,7 +54,7 @@ public class Mural {
     public void compartirLista(){}
 
     /* GETTERS Y SETTERS */
-
+    /*
     public ArrayList<Lista> getListas() {
         return listas;
     }
@@ -70,4 +70,5 @@ public class Mural {
     public void setListas(ArrayList<Lista> listas) {
         this.listas = listas;
     }
+     */
 }

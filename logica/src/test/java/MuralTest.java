@@ -1,13 +1,11 @@
 import ies.puerto.akebia.Mural;
-import org.junit.Assert;
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.jupiter.api.*;
 
 public class MuralTest {
 
     Mural mural;
 
-    @Before
+    @BeforeEach
     public void before() {
 
         if(mural == null) {
@@ -18,7 +16,7 @@ public class MuralTest {
     @Test
     public void constructorVacioTest() {
 
-        Assert.assertNotNull("El mural es nulo",mural);
+        Assertions.assertNotNull(mural, "El mural es nulo");
     }
 
 

@@ -72,7 +72,7 @@ public class Usuario {
 
 
     // Getters y setters
-
+    /*
     public int getId() {
         return id;
     }
@@ -104,4 +104,5 @@ public class Usuario {
     public void setContrasenia(String contrasenia) {
         this.contrasenia = contrasenia;
     }
+     */
 }

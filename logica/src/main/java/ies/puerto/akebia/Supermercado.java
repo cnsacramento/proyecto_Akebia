@@ -47,7 +47,7 @@ public class Supermercado {
 
     //Getters y Setters
 
-
+    /*
     public int getId() {
         return id;
     }
@@ -71,4 +71,6 @@ public class Supermercado {
     public void setListaAlimentos(HashMap<Integer, Alimento> listaAlimentos) {
         this.listaAlimentos = listaAlimentos;
     }
+
+     */
 }

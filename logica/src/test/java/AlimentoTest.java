@@ -1,14 +1,12 @@
 import ies.puerto.akebia.Alimento;
 import ies.puerto.akebia.Categoria;
-import org.junit.Assert;
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.jupiter.api.*;
 
 public class AlimentoTest {
 
 
     Alimento alimento;
-    @Before
+    @BeforeEach
     public void before() {
 
         if(alimento == null) {
@@ -19,7 +17,7 @@ public class AlimentoTest {
     @Test
     public void constructorVacioTest() {
 
-        Assert.assertNotNull("El alimento esta vacio",alimento);
+        Assertions.assertNotNull(alimento, "El alimento esta vacio");
     }
 
     @Test

@@ -37,7 +37,7 @@ public class Lista {
 
     //Getters y Setters
 
-
+    /*
     public int getId() {
         return id;
     }
@@ -61,4 +61,5 @@ public class Lista {
     public void setFecha(Date fecha) {
         this.fecha = fecha;
     }
+    */
 }

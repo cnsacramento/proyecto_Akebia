@@ -27,7 +27,7 @@ public class Alimento {
         this.precio = precio;
         this.categoria = categoria;
     }
-
+    /*
     public int getId() {
         return id;
     }
@@ -51,6 +51,5 @@ public class Alimento {
     public void setPrecio(double precio) {
         this.precio = precio;
     }
-
-
+*/
 }

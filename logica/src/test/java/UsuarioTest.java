@@ -1,13 +1,11 @@
 import ies.puerto.akebia.Usuario;
-import org.junit.Assert;
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.jupiter.api.*;
 
 public class UsuarioTest {
 
     Usuario usuario;
 
-    @Before
+    @BeforeEach
     public void Usuario() {
 
         if(usuario == null) {
@@ -18,14 +16,14 @@ public class UsuarioTest {
     @Test
     public void constructorVacioTest() {
 
-        Assert.assertNotNull("El usuario es nulo", usuario);
+        Assertions.assertNotNull(usuario, "El usuario es nulo");
     }
 
     @Test
     public void constructor3parametrosTest() {
 
         usuario = new Usuario("USUARIO", "EMAIL", "CONTRASENIA");
-        Assert.assertNotNull("El usuario es nulo", usuario);
+        Assertions.assertNotNull(usuario, "El usuario es nulo");
     }
 
 
