@@ -23,6 +23,11 @@ public class Supermercado {
      */
     public Supermercado(String nombre) {}
 
+    /**
+     * Constructor con 2 parametros
+     * @param nombre Nombre del supermercado
+     * @param listaAlimentos Lista con los alimentos del supermercado
+     */
     public Supermercado(String nombre, HashMap<Integer,Alimento> listaAlimentos) {
         this.nombre = nombre;
         this.listaAlimentos = listaAlimentos;

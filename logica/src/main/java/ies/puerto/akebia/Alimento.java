@@ -52,11 +52,5 @@ public class Alimento {
         this.precio = precio;
     }
 
-    public Categoria getCategoria() {
-        return categoria;
-    }
 
-    public void setCategoria(Categoria categoria) {
-        this.categoria = categoria;
-    }
 }

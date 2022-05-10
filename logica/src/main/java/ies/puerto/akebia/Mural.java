@@ -16,7 +16,7 @@ public class Mural {
      */
     public Mural(){}
 
-    //Metodos
+    /* METODOS */
 
     /**
      * Metodo que permite agregar las listas
@@ -53,7 +53,7 @@ public class Mural {
      */
     public void compartirLista(){}
 
-    //Getters y setters
+    /* GETTERS Y SETTERS */
 
     public ArrayList<Lista> getListas() {
         return listas;
