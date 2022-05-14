@@ -1,6 +1,8 @@
 package ies.puerto.akebia;
 
 import java.util.HashMap;
+import java.util.Map;
+import java.util.Optional;
 
 /**
  * @author Alberto Hernandez Medina y Christian Novo Sacramento
@@ -10,7 +12,8 @@ public class Supermercado {
 
     private int id;
     private String nombre;
-    private HashMap<Integer,Alimento> listaAlimentos;
+    private HashMap<Integer,Alimento> alimentos;
+    private static int alimentoId = 0;
 
     /**
      * Constructor por defecto sin parametros
@@ -30,24 +33,50 @@ public class Supermercado {
      */
     public Supermercado(String nombre, HashMap<Integer,Alimento> listaAlimentos) {
         this.nombre = nombre;
-        this.listaAlimentos = listaAlimentos;
+        this.alimentos = listaAlimentos;
     }
 
     //Metodos
 
     /**
-     * Metodo que permite aniadir alimentos al supermercado
+     * Metodo que agrega un alimento
+     * @param alimento Alimento que se va a agregar
+     * @return True si se agrega el alimento y False si no se agrega el alimento
      */
-    public void aniadirAlimento(){}
+    public boolean aniadirAlimento(Alimento alimento){
+
+        if(alimento == null) return false;
+        boolean existe = alimentos.containsValue(alimento);
+        if(!existe) {
+            alimentos.put(alimentoId++, alimento);
+            return true;
+        }else {
+            return false;
+        }
+
+    }
 
     /**
      * Metodo que permite eliminar alimentos al supermercado
      */
-    public void eliminarAlimento(){}
+    public boolean eliminarAlimento(Alimento alimento){
+
+        if(alimento == null) return false;
+        boolean existe = alimentos.containsValue(alimento);
+        if(existe) {
+            alimentos.entrySet().stream()
+                    .filter(a -> alimento.equals(a.getValue()))
+                    .findFirst()
+                    .map(Map.Entry::getKey);
+            alimentos.remove(id);
+           return true;
+        }else {
+            return false;
+        }
+    }
 
     //Getters y Setters
 
-    /*
     public int getId() {
         return id;
     }
@@ -64,13 +93,12 @@ public class Supermercado {
         this.nombre = nombre;
     }
 
-    public HashMap<Integer, Alimento> getListaAlimentos() {
-        return listaAlimentos;
+    public HashMap<Integer, Alimento> getAlimentos() {
+        return alimentos;
     }
 
-    public void setListaAlimentos(HashMap<Integer, Alimento> listaAlimentos) {
-        this.listaAlimentos = listaAlimentos;
+    public void setAlimentos(HashMap<Integer, Alimento> alimentos) {
+        this.alimentos = alimentos;
     }
 
-     */
 }
