@@ -10,6 +10,7 @@ public class Usuario {
     private String alias;
     private String email;
     private String contrasenia;
+    private String foto;
 
     /**
      * Constructor por defecto sin parametros
@@ -33,46 +34,92 @@ public class Usuario {
     /**
      * Metodo que sirve para iniciar sesion
      */
-    public void iniciarSesion(){}
+    public void iniciarSesion(String email, String contrasenia){
+
+
+    }
 
     /**
      * Metodo que permite ver el perfil del usuario
      */
-    public void verPerfil(){}
+    public void verPerfil(){
+
+    }
 
     /**
      * Metodo que permite cambiar la configuracion
-     */
     public void cambiarConfiguracion() {
         cambiarAlias();
         cambiarEmail();
         cambiarContrasenia();
         cambiarFoto();
-    }
+    }*/
 
     /**
      * Metodo que permite cambiar el alias
+     * @param alias Alias del usuario
+     * @return True si se cambia el alias y False si no se cambia
      */
-    public void cambiarAlias(){}
+    public boolean cambiarAlias(String alias){
+
+        if(alias.isEmpty() || alias.equals(this.alias)) {
+            return false;
+        }else {
+            setAlias(alias);
+            return true;
+        }
+    }
 
     /**
-     * Metodo que permite cambiar el email
+     * Metodo que permite cambia el email
+     * @param contrasenia Contrasenia actual de la cuenta
+     * @param nuevoEmail Nuevo email para el usuario
+     * @return True si se cambia el email y False si no se cambia el email
      */
-    public void cambiarEmail(){}
+    public boolean cambiarEmail(String contrasenia, String nuevoEmail){
+
+        if(contrasenia.equals(this.contrasenia) && nuevoEmail != null) {
+            setEmail(nuevoEmail);
+            return true;
+        }else {
+            return false;
+        }
+    }
 
     /**
      * Metodo que permite cambiar la contrasenia
+     * @param viejaContrasenia Antigua contrasenia
+     * @param nuevaContrasenia Nueva contrasenia
+     * @return True si la contrasenia antigua coincide con la contrasenia actual
      */
-    public void cambiarContrasenia(){}
+    public boolean cambiarContrasenia(String viejaContrasenia, String nuevaContrasenia){
+
+        if(viejaContrasenia.equals(contrasenia) && nuevaContrasenia != null) {
+            setContrasenia(nuevaContrasenia);
+            return true;
+        }else {
+            return false;
+        }
+    }
 
     /**
      * Metodo que permite cambiar la foto
+     * @param ruta Ruta de la imagen
+     * @return True si se cambia la foto y False si no se cambia
      */
-    public void cambiarFoto(){}
+    public boolean cambiarFoto(String ruta){
+
+        if(!ruta.isEmpty()) {
+            setFoto(ruta);
+            return true;
+        }else {
+            return false;
+        }
+    }
 
 
     // Getters y setters
-    /*
+
     public int getId() {
         return id;
     }
@@ -104,5 +151,12 @@ public class Usuario {
     public void setContrasenia(String contrasenia) {
         this.contrasenia = contrasenia;
     }
-     */
+
+    public String getFoto() {
+        return foto;
+    }
+
+    public void setFoto(String foto) {
+        this.foto = foto;
+    }
 }
