@@ -17,8 +17,20 @@ public class UsuarioTest {
     }
 
     @Test
-    public void constructorVacioTest() {
+    public void verPerfilTest(){
+        Assertions.assertEquals(usuario.getFoto() + "\n" + "Nombre: " + usuario.getAlias() + "\n" +
+        "Email: " + usuario.getEmail(), usuario.verPerfil(), "El contenido del perfil no devuleve lo esperado");
+    }
 
+    @Test
+    @Disabled("Aun no se ha implementado")
+    public void iniciarSesionTest(){
+
+    }
+
+    @Test
+    public void constructorVacioTest() {
+        usuario = new Usuario();
         Assertions.assertNotNull(usuario, "El usuario es nulo");
     }
 
