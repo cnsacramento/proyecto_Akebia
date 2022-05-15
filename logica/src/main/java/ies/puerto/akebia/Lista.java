@@ -45,11 +45,13 @@ public class Lista {
      * @param cantidad Cantidad del alimento que se quiere eliminar
      * @return True si se elimina el alimento y False si no se elimina el alimento
      */
-    public boolean eliminarAlimento(Alimento alimento, int cantidad){
+    public boolean eliminarAlimento(Alimento alimento, int cantidad) {
 
         if(lista.containsKey(alimento)) {
-            if(cantidad > lista.get(alimento) || cantidad == lista.get(alimento) || cantidad < 0) {
+            if(cantidad > lista.get(alimento) || cantidad == lista.get(alimento)) {
                 lista.remove(alimento);
+            }else if(cantidad < 0){
+                return false;
             }else {
                 lista.put(alimento, lista.get(alimento) - cantidad);
             }
