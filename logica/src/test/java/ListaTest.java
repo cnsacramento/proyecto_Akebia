@@ -31,7 +31,8 @@ public class ListaTest {
 
         Alimento alimento = new Alimento("zanahoria", 3.5, Categoria.VERDURAS);
         Assertions.assertTrue(lista.aniadirAlimento(alimento, 1));
-        Assertions.assertTrue(lista.aniadirAlimento(new Alimento("merluza", 3.5, Categoria.PESCADOS), 1));
+        lista.getLista().put(alimento, 1);
+        Assertions.assertTrue(lista.aniadirAlimento(alimento, 1));
     }
 
     @Test
@@ -42,17 +43,17 @@ public class ListaTest {
 
     @Test
     public void eliminarAlimentoTest() {
-
         lista.getLista().put(ALIMENTO,1);
         Assertions.assertTrue(lista.eliminarAlimento(ALIMENTO, 1));
         lista.getLista().put(ALIMENTO,2);
         Assertions.assertTrue(lista.eliminarAlimento(ALIMENTO, 1));
-        Assertions.assertTrue(lista.eliminarAlimento(ALIMENTO, -1));
+        Assertions.assertTrue(lista.eliminarAlimento(ALIMENTO, 5));
     }
 
     @Test
     public void eliminarAlimentoFalseTest() {
-
+        lista.getLista().put(ALIMENTO,1);
+        Assertions.assertFalse(lista.eliminarAlimento(ALIMENTO, -1));
         Assertions.assertFalse(lista.eliminarAlimento(null, 1));
     }
 
