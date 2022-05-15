@@ -10,8 +10,8 @@ import java.util.HashMap;
 public class Lista {
 
     private int id;
-    private HashMap<Integer,Alimento> lista;
-    private Date fecha;
+    private HashMap<Alimento,Integer> lista = new HashMap<Alimento,Integer>();
+    private Date fecha = new Date();;
 
     /**
      * Constructor por defecto sin parametros
@@ -21,23 +21,54 @@ public class Lista {
     //Metodos
 
     /**
-     * Metodo que permite aniadir un alimento a la lista
+     * Metodo que agrega un alimento a la lista
+     * @param alimento Alimento que se agrega
+     * @param cantidad Cantidad de alimento que se agrega a la lista
+     * @return True si se agrega el alimento y False si no se agrega el alimento
      */
-    public void aniadirAlimento(){}
+    public boolean aniadirAlimento(Alimento alimento, int cantidad){
+
+        if(alimento == null) return false;
+        if(lista.containsKey(alimento)) {
+            lista.put(alimento,lista.get(alimento) + cantidad);
+            return true;
+        }else {
+            lista.put(alimento, cantidad);
+            return true;
+        }
+
+    }
 
     /**
-     * Metodo que permite eliminar un alimento de la lista
+     * Metodo que permite eliminar alimentos por cantidad
+     * @param alimento Alimento que se quiere eliminar
+     * @param cantidad Cantidad del alimento que se quiere eliminar
+     * @return True si se elimina el alimento y False si no se elimina el alimento
      */
-    public void eliminarAlimento(){}
+    public boolean eliminarAlimento(Alimento alimento, int cantidad){
+
+        if(lista.containsKey(alimento)) {
+            if(cantidad > lista.get(alimento) || cantidad == lista.get(alimento) || cantidad < 0) {
+                lista.remove(alimento);
+            }else {
+                lista.put(alimento, lista.get(alimento) - cantidad);
+            }
+            return true;
+        }else {
+            return false;
+        }
+    }
 
     /**
      * Metodo que permite ver los alimentos de la lista
      */
-    public void verLista(){}
+    public String verLista(){
+
+        return getLista().toString();
+    }
 
     //Getters y Setters
 
-    /*
     public int getId() {
         return id;
     }
@@ -46,11 +77,11 @@ public class Lista {
         this.id = id;
     }
 
-    public HashMap<Integer, Alimento> getLista() {
+    public HashMap<Alimento, Integer> getLista() {
         return lista;
     }
 
-    public void setLista(HashMap<Integer, Alimento> lista) {
+    public void setLista(HashMap<Alimento, Integer> lista) {
         this.lista = lista;
     }
 
@@ -61,5 +92,5 @@ public class Lista {
     public void setFecha(Date fecha) {
         this.fecha = fecha;
     }
-    */
+
 }
