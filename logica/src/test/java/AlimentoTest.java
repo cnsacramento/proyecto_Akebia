@@ -19,7 +19,7 @@ public class AlimentoTest {
 
     @Test
     public void constructorVacioTest() {
-
+        alimento = new Alimento();
         Assertions.assertNotNull(alimento, "El alimento esta vacio");
     }
 
