@@ -33,17 +33,18 @@ public class Usuario {
 
     /**
      * Metodo que sirve para iniciar sesion
-     */
     public void iniciarSesion(String email, String contrasenia){
 
-
     }
+    **/
 
     /**
      * Metodo que permite ver el perfil del usuario
      */
-    public void verPerfil(){
-
+    public String verPerfil(){
+        String respuesta = foto + "\n" + "Nombre: " + alias + "\n" +
+                "Email: " + email;
+        return respuesta;
     }
 
     /**
